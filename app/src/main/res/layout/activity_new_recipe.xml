@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9EC6FF00"
+    tools:context=".ui.NewRecipeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingTop="10dp"
+            android:text="Add New Recipe"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FF3D00"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/imgNewRecipe"
+            android:layout_width="310dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/noimg" />
+
+        <TextView
+            android:id="@+id/tvUpdateImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Image"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <EditText
+            android:id="@+id/etNewRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_profile"
+            android:hint="New Recipe Name"
+            android:paddingLeft="10dp" />
+
+        <EditText
+            android:id="@+id/etNewRecipeCategory"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/custom_profile"
+            android:hint="Like: Breakfast, lunch ..."
+            android:paddingLeft="10dp" />
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_profile"
+            android:gravity="top"
+            android:hint="Recipe Description"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp" />
+
+        <Button
+            android:id="@+id/btnAddRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_custom"
+            android:text="Add Recipe" />
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_custom"
+            android:text="Update"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</ScrollView>

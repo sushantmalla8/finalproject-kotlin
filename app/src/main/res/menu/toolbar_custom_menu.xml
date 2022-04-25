@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/miUser"
+        android:icon="@drawable/ic_baseline_person_new"
+        android:title="User"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item
+                android:id="@+id/miLogout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+        </menu>
+
+    </item>
+
+
+</menu>

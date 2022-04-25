@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MeroRecipe</string>
+    <string name="register"><u><b>Register</b></u></string>
+    <string name="quote"><i>"A new way to share your recipe"</i></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recipe"><b><u>My Recipe</u></b></string>
+</resources>

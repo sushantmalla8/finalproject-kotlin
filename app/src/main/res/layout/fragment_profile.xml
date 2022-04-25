@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:src="@drawable/noimg" />
+
+        <TextView
+            android:id="@+id/tvRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe"
+            android:textAlignment="center"
+            android:textColor="#FF9100"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etProfileName"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_profile"
+                android:enabled="false"
+                android:gravity="center"
+                android:hint="Fullname"
+                app:layout_constraintEnd_toStartOf="@+id/tvEditFullName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvEditFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="12dp"
+                android:layout_toRightOf="@id/etProfileName"
+                android:background="@drawable/et_custom"
+                android:drawableEnd="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="@+id/etProfileName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <EditText
+                android:id="@+id/etProfileUsername"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/etProfileName"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_profile"
+                android:drawableEnd="@drawable/ic_baseline_person_new"
+                android:enabled="false"
+                android:gravity="center"
+                android:hint="Username"
+                app:layout_constraintEnd_toStartOf="@+id/tvEditUserName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etProfileName" />
+
+            <TextView
+                android:id="@+id/tvEditUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/et_custom"
+                android:drawableEnd="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="@+id/etProfileUsername"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditFullName" />
+
+            <EditText
+                android:id="@+id/etProfileEmail"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/etProfileUsername"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_profile"
+                android:drawableEnd="@drawable/ic_email"
+                android:enabled="false"
+                android:gravity="center"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toStartOf="@+id/tvEditEmail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etProfileUsername" />
+
+
+            <TextView
+                android:id="@+id/tvEditEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/et_custom"
+                android:drawableEnd="@drawable/ic_edit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditUserName" />
+
+            <TextView
+                android:id="@+id/tvd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etProfileEmail"
+                android:layout_margin="7dp"
+                android:text="Gender"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etProfileEmail" />
+
+            <RadioGroup
+                android:id="@+id/rdoGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvd"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvd">
+
+                <RadioButton
+                    android:id="@+id/rdoMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/rdoFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginLeft="7dp"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/rdoOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginLeft="7dp"
+                    android:text="Others" />
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="40dp"
+            android:text="Update" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:text="Change Password"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etOldPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_profile"
+                android:drawableEnd="@drawable/ic_password"
+                android:gravity="center"
+                android:hint="Old Password"
+
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/etNewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_profile"
+                android:drawableEnd="@drawable/ic_password"
+                android:gravity="center"
+                android:hint="New Password"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btnUpdatePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="50dp"
+                android:text="Update Password" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

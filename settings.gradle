@@ -1,0 +1,3 @@
+rootProject.name = "merorecipe"
+include ':app'
+include ':recipewearos'
