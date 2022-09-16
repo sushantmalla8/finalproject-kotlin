@@ -45,7 +45,7 @@ class merorecipeUnitTest {
     fun loginTestFailed() = runBlocking {
         val userRepository = UserRepository()
         //Provided wrong username : actual Result must be false for the test to be failed.
-        val getResponse = userRepository.login("ramshah1", "ramshah")
+        val getResponse = userRepository.login("ramshah", "ramshah")
         val expectedResult: Boolean = true
         val actualResult = getResponse.success
         Assert.assertEquals(expectedResult, actualResult)
